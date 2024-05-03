@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package="protos/accountService";
+
+service AccountService {
+    rpc GetAccountInfo(GetAccountInfoRequest) returns (GetAccountInfoResponse);
+}
+
+message GetAccountInfoRequest {
+    string token=1;
+}
+
+message GetAccountInfoResponse {
+    string user_id=1;
+}
